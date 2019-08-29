@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">WheelFitment</string>
+
+    <!-- Spec Entry Form -->
+    <string name="spec_entry_title">Wheel &amp; Tire Specs</string>
+    <string name="spec_entry_diam">Diameter:</string>
+    <string name="spec_entry_width">Width:</string>
+    <string name="spec_entry_offset">Offset:</string>
+    <string name="spec_entry_camber">Camber:</string>
+    <string name="spec_entry_tire_width">Tire Width</string>
+    <string name="spec_entry_sidewall">Sidewall</string>
+
+    <string name="spec_entry_diam_hint">(in.)</string>
+    <string name="spec_entry_width_hint">(in.)</string>
+    <string name="spec_entry_offset_hint">(mm)</string>
+    <string name="spec_entry_camber_hint">(deg.)</string>
+    <string name="spec_entry_tire_width_hint">(mm)</string>
+    <string name="spec_entry_sidewall_hint">Sidewall</string>
+
+    <string name="spec_entry_reset_button">Reset</string>
+    <string name="spec_entry_preview_button">Preview</string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/tireWidthTV"/>
+    <TextView
+            android:id="@+id/tireSidewallTV"/>
+    <TextView
+            android:id="@+id/wheelDiameterTV"/>
+    <TextView
+            android:id="@+id/wheelWidthTV"/>
+    <TextView
+            android:id="@+id/wheelOffsetTV"/>
+    <TextView
+            android:id="@+id/wheelCamberTV"/>
+</GridLayout>
