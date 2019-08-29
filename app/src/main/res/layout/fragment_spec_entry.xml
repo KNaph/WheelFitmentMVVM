@@ -11,7 +11,7 @@
         <TextView
                 android:id="@+id/spec_entry_title"
                 android:text="@string/spec_entry_title"
-                android:textSize="30dp"
+                android:textSize="@dimen/spec_entry_title_font_size"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
@@ -25,6 +25,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/spec_entry_diam"
+                android:textSize="@dimen/spec_entry_diam_font_size"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintEnd_toStartOf="@+id/wheelDiameterET"
                 app:layout_constraintTop_toBottomOf="@+id/spec_entry_title"
@@ -46,6 +47,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/spec_entry_width"
+                android:textSize="@dimen/spec_entry_width_font_size"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintEnd_toStartOf="@+id/wheelWidthET"
                 app:layout_constraintTop_toBottomOf="@+id/wheelDiameterTV"
@@ -66,6 +68,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/spec_entry_offset"
+                android:textSize="@dimen/spec_entry_offset_font_size"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintEnd_toStartOf="@+id/wheelOffsetET"
                 app:layout_constraintTop_toBottomOf="@+id/wheelWidthTV"
@@ -86,6 +89,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/spec_entry_camber"
+                android:textSize="@dimen/spec_entry_camber_font_size"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintEnd_toStartOf="@+id/wheelCamberET"
                 app:layout_constraintTop_toBottomOf="@+id/wheelOffsetTV"
@@ -106,6 +110,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/spec_entry_tire_width"
+                android:textSize="@dimen/spec_entry_tire_width_font_size"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintEnd_toStartOf="@+id/tireWidthET"
                 app:layout_constraintTop_toBottomOf="@+id/wheelCamberTV"
@@ -126,6 +131,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/spec_entry_sidewall"
+                android:textSize="@dimen/spec_entry_sidewall_font_size"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintEnd_toStartOf="@+id/tireSidewallET"
                 app:layout_constraintTop_toBottomOf="@+id/tireWidthTV"
@@ -140,24 +146,15 @@
                 app:layout_constraintTop_toTopOf="@+id/tireSidewallTV"
                 app:layout_constraintBottom_toBottomOf="@+id/tireSidewallTV"/>
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="HELLO TEST TEXT?"
-                app:layout_constraintTop_toBottomOf="@+id/tireSidewallET"
-                android:clickable="true"
-                android:textAlignment="center"
-                android:background="?attr/selectableItemBackground"/>
-
-        <Button
-                android:id="@+id/spec_entry_reset_btn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/spec_entry_reset_button"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintEnd_toStartOf="@+id/spec_entry_preview_btn" android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+        <!--<Button-->
+                <!--android:id="@+id/spec_entry_reset_btn"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/spec_entry_reset_button"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintHorizontal_bias="0.5"-->
+                <!--app:layout_constraintEnd_toStartOf="@+id/spec_entry_preview_btn"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent"/>-->
         <!--<Button-->
                 <!--android:id="@+id/spec_entry_preview_btn"-->
                 <!--android:layout_width="0dp"-->
@@ -165,47 +162,41 @@
                 <!--android:text="@string/spec_entry_preview_button"-->
                 <!--app:layout_constraintStart_toEndOf="@+id/spec_entry_reset_btn"-->
                 <!--app:layout_constraintHorizontal_bias="0.5"-->
-                <!--app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="8dp"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
                 <!--app:layout_constraintBottom_toBottomOf="parent"/>-->
         <TextView
                 android:id="@+id/spec_entry_preview_btn"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:text="@string/spec_entry_preview_button"
-                android:textAlignment="center"
+                android:layout_marginStart="0.5dp"
+                android:gravity="center"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:background="@color/colorPrimary"
+                android:elevation="20dp"
                 app:layout_constraintStart_toEndOf="@+id/spec_entry_reset_btn"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
 
-        <!--<TextView-->
-                <!--android:id="@+id/spec_entry_reset_btn"-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="@string/spec_entry_reset_button"-->
-                <!--android:clickable="true"-->
-                <!--android:focusable="true"-->
-                <!--android:background="?attr/selectableItemBackground"-->
-                <!--app:layout_constraintStart_toStartOf="parent"-->
-                <!--app:layout_constraintHorizontal_bias="0.5"-->
-                <!--app:layout_constraintEnd_toStartOf="@+id/spec_entry_preview_btn" android:layout_marginBottom="8dp"-->
-                <!--app:layout_constraintBottom_toBottomOf="parent"/>-->
-        <!--<TextView-->
-                <!--android:id="@+id/spec_entry_preview_btn"-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="@string/spec_entry_preview_button"-->
-                <!--android:clickable="true"-->
-                <!--android:focusable="true"-->
-                <!--android:background="?attr/selectableItemBackground"-->
-                <!--app:layout_constraintStart_toEndOf="@+id/spec_entry_reset_btn"-->
-                <!--app:layout_constraintHorizontal_bias="0.5"-->
-                <!--app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="8dp"-->
-                <!--app:layout_constraintBottom_toBottomOf="parent"/>-->
+        <TextView
+                android:id="@+id/spec_entry_reset_btn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:text="@string/spec_entry_reset_button"
+                android:layout_marginEnd="0.5dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:background="@color/colorPrimary"
+                android:elevation="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/spec_entry_preview_btn"
+                app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

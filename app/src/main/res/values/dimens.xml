@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Spec Entry Form -->
+    <dimen name="spec_entry_title_font_size">30sp</dimen>
+    <dimen name="spec_entry_diam_font_size">20sp</dimen>
+    <dimen name="spec_entry_width_font_size">20sp</dimen>
+    <dimen name="spec_entry_offset_font_size">20sp</dimen>
+    <dimen name="spec_entry_camber_font_size">20sp</dimen>
+    <dimen name="spec_entry_tire_width_font_size">20sp</dimen>
+    <dimen name="spec_entry_sidewall_font_size">20sp</dimen>
+
+</resources>
