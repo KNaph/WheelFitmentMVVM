@@ -1,5 +1,6 @@
 package com.kylephan.autoapps.wheelfitment.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.kylephan.autoapps.wheelfitment.model.Fender
 import com.kylephan.autoapps.wheelfitment.model.Wheel
@@ -7,13 +8,15 @@ import com.kylephan.autoapps.wheelfitment.model.Wheel
 class SpecEntryViewModel: ViewModel() {
     private val TAG = this.javaClass.simpleName
 
-    private lateinit var wheel1: Wheel
+    private var wheel: Wheel = Wheel()
     private var fender: Fender? = null
 
-    fun init(wheel1: Wheel, fender: Fender?) {
-        this.wheel1 = wheel1
-        this.fender = fender
-    }
+    var testDefault = 17
+
+//    fun init(wheel: Wheel, fender: Fender?) {
+//        this.wheel = wheel
+//        this.fender = fender
+//    }
 
     init {
 
@@ -26,12 +29,18 @@ class SpecEntryViewModel: ViewModel() {
                         wheelOffset: Int,
                         wheelCamber: Float) {
 
-        wheel1.tireWidth = tireWidth
-        wheel1.tireSidewall = tireSidewall
-        wheel1.wheelDiameter = wheelDiameter
-        wheel1.wheelWidth = wheelWidth
-        wheel1.wheelOffset = wheelOffset
-        wheel1.wheelCamber = wheelCamber
+        wheel.tireWidth = tireWidth
+        wheel.tireSidewall = tireSidewall
+        wheel.wheelDiameter = wheelDiameter
+        wheel.wheelWidth = wheelWidth
+        wheel.wheelOffset = wheelOffset
+        wheel.wheelCamber = wheelCamber
+
+        Log.d(TAG, "KP## WHEEL SPEC : $wheel")
+
+//        Log.d(TAG, "KP## TIRE W : ${wheel.tireWidth} : TIRE SIDEWALL : ${wheel.tireSidewall}\n" +
+//                "WHEEL DIAM : ${wheel.wheelDiameter} : WHEEL WIDTH : ${wheel.wheelWidth}\n" +
+//                "WHEEL OFFSET : ${wheel.wheelOffset} : WHEEL CAMBER : ${wheel.wheelCamber}")
     }
 
     fun updateFenderSpec(fenderAngle: Float,

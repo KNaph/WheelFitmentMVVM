@@ -9,12 +9,12 @@ class Wheel(var tireWidth: Int = 0,
 
     override fun toString(): String {
         val sBuilder: StringBuilder = StringBuilder()
-        sBuilder.append("Tire Width: $tireWidth")
-        sBuilder.append("Tire Sidewall: $tireSidewall")
-        sBuilder.append("Wheel Diameter: $wheelDiameter")
-        sBuilder.append("Wheel Width: $wheelWidth")
-        sBuilder.append("Wheel Offset: $wheelOffset")
-        sBuilder.append("Wheel Camber: $wheelCamber")
+        sBuilder.append("Tire Width: $tireWidth\n")
+        sBuilder.append("Tire Sidewall: $tireSidewall\n")
+        sBuilder.append("Wheel Diameter: $wheelDiameter\n")
+        sBuilder.append("Wheel Width: $wheelWidth\n")
+        sBuilder.append("Wheel Offset: $wheelOffset\n")
+        sBuilder.append("Wheel Camber: $wheelCamber\n")
 
         return sBuilder.toString()
     }

@@ -14,16 +14,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val specFragment = FragmentSpecEntry()
-
-        supportFragmentManager.inTransaction {
-            add(R.id.fragment_container, specFragment)
-        }
+//        val specFragment = FragmentSpecEntry()
+//
+//        supportFragmentManager.inTransaction {
+//            add(R.id.fragment_container, specFragment)
+//        }
     }
 
-    inline fun FragmentManager.inTransaction(func: FragmentTransaction.() -> Unit) {
-        val fragmentTransaction = beginTransaction()
-        fragmentTransaction.func()
-        fragmentTransaction.commit()
-    }
+//    inline fun FragmentManager.inTransaction(func: FragmentTransaction.() -> Unit) {
+//        val fragmentTransaction = beginTransaction()
+//        fragmentTransaction.func()
+//        fragmentTransaction.commit()
+//    }
 }
