@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/spec_entry_destination">
+
+        <fragment
+            android:id="@+id/spec_entry_destination"
+            android:name="com.kylephan.autoapps.wheelfitment.specentry.FragmentSpecEntry"
+
+            tools:layout="@layout/fragment_spec_entry">
+            <action
+                android:id="@+id/spec_entry_to_preview"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:destination="@id/spec_preview_destination">
+
+            </action>
+        </fragment>
+
+        <fragment
+                android:id="@+id/spec_preview_destination"
+                android:name="com.kylephan.autoapps.wheelfitment.specpreview.FragmentSpecPreview"
+                tools:layout="@layout/fragment_spec_preview"/>
+
+</navigation>
