@@ -21,9 +21,13 @@
             </action>
         </fragment>
 
-        <fragment
-                android:id="@+id/spec_preview_destination"
-                android:name="com.kylephan.autoapps.wheelfitment.specpreview.FragmentSpecPreview"
-                tools:layout="@layout/fragment_spec_preview"/>
+        <!--<fragment-->
+                <!--android:id="@+id/spec_preview_destination"-->
+                <!--android:name="com.kylephan.autoapps.wheelfitment.specpreview.FragmentSpecPreview"-->
+                <!--tools:layout="@layout/fragment_spec_preview"/>-->
+
+    <fragment
+            android:id="@+id/spec_preview_destination"
+            android:name="com.kylephan.autoapps.wheelfitment.specpreview.FragmentSpecPreviewOpenGL"/>
 
 </navigation>
